@@ -55,3 +55,17 @@
 .animate-marquee {
   animation: pulse 2s ease-in-out infinite;
 }
+
+/* Cart counter animation */
+@keyframes cartBounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.cart-counter-animation {
+  animation: cartBounce 0.3s ease-in-out;
+}

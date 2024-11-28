@@ -53,7 +53,7 @@ export const Filters: React.FC<FiltersProps> = ({
         <h3 className="text-lg font-semibold mb-2 text-slate-700 dark:text-slate-200">Buscar</h3>
         <input
           type="text"
-          placeholder="Buscar produtos..."
+          placeholder="Encontre o produto perfeito..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           className="w-full px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-600 

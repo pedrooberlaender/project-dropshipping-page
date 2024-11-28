@@ -8,10 +8,12 @@ import { InfoSection } from './components/InfoSection';
 import { Footer } from './components/Footer';
 import { ThemeToggle } from './components/ThemeToggle';
 import { NavigationProvider } from './contexts/NavigationContext';
+import { CartProvider } from './contexts/CartContext';
 
 // Pages
 import ElectronicsPage from './pages/ElectronicsPage';
 import ProductOffer from './pages/ProductOffer';
+import Cart from './pages/Cart';
 
 // Home page component
 const HomePage = () => (
@@ -26,19 +28,22 @@ function App() {
   return (
     <Router>
       <NavigationProvider>
-        <div className="flex flex-col min-h-screen bg-white dark:bg-slate-900 transition-colors duration-300">
-          <FreeShippingBanner />
-          <Navbar />
-          <main className="flex-grow">
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/eletronicos/*" element={<ElectronicsPage />} />
-              <Route path="/produto/:productId" element={<ProductOffer />} />
-            </Routes>
-          </main>
-          <Footer />
-          <ThemeToggle />
-        </div>
+        <CartProvider>
+          <div className="flex flex-col min-h-screen bg-white dark:bg-slate-900 transition-colors duration-300">
+            <FreeShippingBanner />
+            <Navbar />
+            <main className="flex-grow">
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/eletronicos/*" element={<ElectronicsPage />} />
+                <Route path="/produto/:productId" element={<ProductOffer />} />
+                <Route path="/cart" element={<Cart />} />
+              </Routes>
+            </main>
+            <Footer />
+            <ThemeToggle />
+          </div>
+        </CartProvider>
       </NavigationProvider>
     </Router>
   );
