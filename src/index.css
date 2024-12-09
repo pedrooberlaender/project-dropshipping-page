@@ -1,0 +1,73 @@
+@import './styles/creditCard.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply antialiased text-gray-900;
+    touch-action: manipulation;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500;
+  }
+}
+
+@layer utilities {
+  .tap-highlight-transparent {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .nav-button {
+    @apply transition-all duration-300;
+  }
+
+  @media (hover: hover) {
+    .nav-button:hover {
+      @apply bg-[#4F46E5]/80 opacity-100 scale-110;
+    }
+  }
+  
+  @media (hover: none) {
+    .nav-button:active {
+      @apply bg-[#4F46E5]/80 scale-95;
+      transition: none;
+    }
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-marquee {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Cart counter animation */
+@keyframes cartBounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.cart-counter-animation {
+  animation: cartBounce 0.3s ease-in-out;
+}
