@@ -193,6 +193,11 @@ export function Hero() {
           />
         ))}
       </div>
+<<<<<<< HEAD
     </div>
   );
+=======
+    </div>
+  );
+>>>>>>> f8faa856918704f1a92ef77419528b8b05ce4258
 }

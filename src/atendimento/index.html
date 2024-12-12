@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atendimento ao Cliente</title>
+    <link href="../style.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Chat Section -->
+        <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-6">Fale Conosco</h2>
+            <div class="chat-container bg-gray-50 p-4 rounded-lg mb-4 h-64 overflow-y-auto" id="chatMessages">
+                <!-- Messages will appear here -->
+            </div>
+            <form id="chatForm" class="flex gap-2">
+                <input type="text" id="messageInput" class="flex-1 p-2 border rounded-lg" placeholder="Digite sua mensagem...">
+                <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">Enviar</button>
+            </form>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-2xl font-bold mb-6">Dúvidas Frequentes</h2>
+            <div class="space-y-4">
+                <div class="faq-item">
+                    <button class="faq-question w-full text-left p-4 bg-gray-50 rounded-lg hover:bg-gray-100 focus:outline-none">
+                        Como faço para rastrear meu pedido?
+                    </button>
+                    <div class="faq-answer hidden p-4">
+                        Você pode rastrear seu pedido através do código de rastreamento enviado no e-mail de confirmação da compra.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question w-full text-left p-4 bg-gray-50 rounded-lg hover:bg-gray-100 focus:outline-none">
+                        Qual é o prazo de entrega?
+                    </button>
+                    <div class="faq-answer hidden p-4">
+                        O prazo de entrega varia de acordo com a sua localização, geralmente entre 7 a 15 dias úteis.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question w-full text-left p-4 bg-gray-50 rounded-lg hover:bg-gray-100 focus:outline-none">
+                        Como solicitar reembolso?
+                    </button>
+                    <div class="faq-answer hidden p-4">
+                        Para solicitar reembolso, entre em contato com nosso suporte informando o número do pedido e o motivo da solicitação.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
